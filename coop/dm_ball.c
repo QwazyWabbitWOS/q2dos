@@ -442,7 +442,7 @@ PickBallStart(edict_t *ent)
 		return NULL;
 	}
 
-	which = ceil(random() * dball_ball_startpt_count);
+	which = ceilf(random() * dball_ball_startpt_count);
 	e = NULL;
 	current = 0;
 
