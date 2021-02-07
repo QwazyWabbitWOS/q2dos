@@ -1296,7 +1296,7 @@ ai_run_slide_rogue (edict_t *self, float distance) /* FS: Coop: Rogue specific *
 	}
 
 	/* clamp maximum sideways move for non flyers to make them look less jerky */
-	if (!self->flags & FL_FLY)
+	if (!(self->flags & FL_FLY))
 	{
 		distance = min(distance, 0.8);
 	}
@@ -1431,7 +1431,7 @@ ai_checkattack(edict_t *self, float dist)
 		/* only check sound if it's not visible anyway (=> attack if visible) */
 		if ((self->monsterinfo.aiflags & AI_SOUND_TARGET) && !visible(self, self->goalentity))
 		{
-			if ((level.time - self->enemy->last_sound_time) > 5.0)
+			if ((level.time - self->enemy->last_sound_time) > 5.0f)
 			{
 				if (self->goalentity == self->enemy)
 				{

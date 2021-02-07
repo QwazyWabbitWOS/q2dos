@@ -2284,9 +2284,11 @@ PrecacheItem(gitem_t *it)
 		{
 			gi.error("PrecacheItem: %s has bad precache string", it->classname);
 		}
-
-		memcpy(data, start, len);
-		data[len] = 0;
+		else
+		{
+			memcpy(data, start, len);
+			data[len] = 0;
+		}
 
 		if (*s)
 		{

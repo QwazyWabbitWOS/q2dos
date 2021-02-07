@@ -2,15 +2,15 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{3ea03e87-e727-478d-8670-cefed1d87738}</UniqueIdentifier>
+      <UniqueIdentifier>{7a9fdabb-4477-4a08-be0d-a319e7dd2c7e}</UniqueIdentifier>
       <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;for;f90</Extensions>
     </Filter>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{3ea6c6f4-832f-4390-9f32-c70f240ef0ca}</UniqueIdentifier>
+      <UniqueIdentifier>{3b2edd1d-011d-4a0d-83e9-f7801b7591f0}</UniqueIdentifier>
       <Extensions>h;hpp;hxx;hm;inl;fi;fd</Extensions>
     </Filter>
     <Filter Include="Resource Files">
-      <UniqueIdentifier>{98e4a4b6-5b96-4da4-b4ab-4a640e28f05e}</UniqueIdentifier>
+      <UniqueIdentifier>{e0772d33-b0ac-4b07-9489-aa0637df03d9}</UniqueIdentifier>
       <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;cnt;rtf;gif;jpg;jpeg;jpe</Extensions>
     </Filter>
   </ItemGroup>
@@ -260,11 +260,21 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\coop\game.def">
+    <ClInclude Include="..\coop\z_anim.h">
       <Filter>Source Files</Filter>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
+    </ClInclude>
+    <ClInclude Include="..\coop\z_boss.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\coop\z_handler.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\coop\z_hound.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\coop\z_sentien.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
     <ClInclude Include="..\coop\b_cam.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -391,17 +401,10 @@
     <ClInclude Include="..\coop\q_shared.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\coop\z_boss.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\coop\z_handler.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\coop\z_hound.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\coop\z_sentien.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\coop\game.def">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
   </ItemGroup>
 </Project>

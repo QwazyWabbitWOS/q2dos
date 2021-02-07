@@ -24,7 +24,7 @@
 
 #define TRACKER_DAMAGE_FLAGS (DAMAGE_NO_POWER_ARMOR | DAMAGE_ENERGY | DAMAGE_NO_KNOCKBACK)
 #define TRACKER_IMPACT_FLAGS (DAMAGE_NO_POWER_ARMOR | DAMAGE_ENERGY)
-#define TRACKER_DAMAGE_TIME 0.5
+#define TRACKER_DAMAGE_TIME 0.5f
 
 extern byte P_DamageModifier(edict_t *ent);
 extern void check_dodge(edict_t *self, vec3_t start, vec3_t dir, int speed);
@@ -829,7 +829,7 @@ Nuke_Think(edict_t *ent)
 
 		if (ent->timestamp <= level.time)
 		{
-			if ((ent->wait - level.time) <= (NUKE_TIME_TO_LIVE / 2.0))
+			if ((ent->wait - level.time) <= (NUKE_TIME_TO_LIVE / 2.0f))
 			{
 				gi.sound(ent, CHAN_NO_PHS_ADD + CHAN_VOICE, gi.soundindex("weapons/nukewarn2.wav"), 1, attenuation, 0);
 				ent->timestamp = level.time + 0.3;

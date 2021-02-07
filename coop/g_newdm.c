@@ -193,7 +193,7 @@ FindSubstituteItem(edict_t *ent)
 		return NULL;
 	}
 
-	pick = ceil(random() * count);
+	pick = ceilf(random() * count);
 	count = 0;
 
 	/* second pass, pick one. */

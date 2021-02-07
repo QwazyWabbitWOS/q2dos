@@ -545,7 +545,7 @@ TurretFire(edict_t *self)
 			chance = random();
 
 			/* ramp chance. easy - 50%, avg - 60%, hard - 70%, nightmare - 80% */
-			chance += (3 - skill->value) * 0.1;
+			chance += (3 - skill->value) * 0.1f;
 
 			if (chance < 0.8)
 			{
@@ -1033,7 +1033,7 @@ turret_checkattack(edict_t *self)
 							}
 
 							self->monsterinfo.attack_state = AS_BLIND;
-							self->monsterinfo.attack_finished = level.time + 0.5 + 2 * random();
+							self->monsterinfo.attack_finished = level.time + 0.5f + 2 * random();
 							return true;
 						}
 					}

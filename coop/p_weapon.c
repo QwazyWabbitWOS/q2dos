@@ -7,7 +7,7 @@
 #define FRAME_IDLE_FIRST		(FRAME_FIRE_LAST + 1)
 #define FRAME_DEACTIVATE_FIRST	(FRAME_IDLE_LAST + 1)
 
-#define GRENADE_TIMER		3.0
+#define GRENADE_TIMER		3.0f
 #define GRENADE_MINSPEED	400
 #define GRENADE_MAXSPEED	800
 
@@ -1831,7 +1831,7 @@ Weapon_HyperBlaster_Fire(edict_t *ent)
 		}
 		else
 		{
-			rotation = (ent->client->ps.gunframe - 5) * 2 * M_PI / 6;
+			rotation = (ent->client->ps.gunframe - 5.0) * 2 * M_PI / 6;
 			offset[0] = -4 * sin(rotation);
 			offset[1] = 0;
 			offset[2] = 4 * cos(rotation);

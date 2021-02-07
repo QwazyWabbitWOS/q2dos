@@ -41,7 +41,7 @@ qboolean stalker_ok_to_transition(edict_t *self);
 #ifndef __DJGPP__
 #define PI 3.14159
 #endif
-#define FAUX_GRAVITY 800.0
+#define FAUX_GRAVITY 800.0f
 
 extern qboolean SV_PointCloseEnough(edict_t *ent, vec3_t goal, float dist);
 extern void drawbbox(edict_t *self);
@@ -818,7 +818,7 @@ calcJumpAngle(vec3_t start, vec3_t end, float velocity, vec3_t angles)
 	vec3_t dist;
 
 	VectorSubtract(end, start, dist);
-	distH = (float)sqrt(dist[0] * dist[0] + dist[1] * dist[1]);
+	distH = (float)sqrtf(dist[0] * dist[0] + dist[1] * dist[1]);
 	distV = dist[2];
 
 	if (distV < 0)
@@ -828,7 +828,7 @@ calcJumpAngle(vec3_t start, vec3_t end, float velocity, vec3_t angles)
 
 	if (distV)
 	{
-		l = (float)sqrt(distH * distH + distV * distV);
+		l = (float)sqrtf(distH * distH + distV * distV);
 		U = (float)atan(distV / distH);
 
 		if (dist[2] > 0)
@@ -861,7 +861,7 @@ calcJumpAngle(vec3_t start, vec3_t end, float velocity, vec3_t angles)
 	}
 	else
 	{
-		l = (float)sqrt(distH * distH + distV * distV);
+		l = (float)sqrtf(distH * distH + distV * distV);
 
 		angles[2] = 0.0;
 

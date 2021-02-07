@@ -975,7 +975,8 @@ void CoopCheckGamemode(edict_t *ent, pmenuhnd_t *p /* unused */)
 			Com_sprintf(votestring, sizeof(votestring), "cmd vote gamemode zaero\n");
 			break;
 		default:
-			Com_sprintf(votestring, sizeof(votestring), "cmd vote gamemode %s\n", gamemode_array[p->cur-VGAMEMODEMENU_VANILLA].gamemode);
+			Com_sprintf(votestring, sizeof(votestring), "cmd vote gamemode %s\n", 
+				gamemode_array[p->cur-VGAMEMODEMENU_VANILLA].gamemode);
 			break;
 	}
 	PMenu_Close(ent);
@@ -1600,6 +1601,7 @@ void CoopGamemodeInit (void)
 		free(fileBuffer);
 	}
 }
+
 int CoopGamemodeExists (const char *gamemode)
 {
 	int i;

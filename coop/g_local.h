@@ -41,8 +41,8 @@
 //==================================================================
 
 // view pitching times
-#define DAMAGE_TIME		0.5
-#define	FALL_TIME		0.3
+#define DAMAGE_TIME		0.5f
+#define	FALL_TIME		0.3f
 
 // ROGUE- id killed this weapon
 //#define	KILL_DISRUPTOR	1	// Knightmare- re-enabled this due to public interest
@@ -87,7 +87,7 @@
 #define	FL_NOGIB				0x00010000	// player has been vaporized by a nuke, drop no gibs
 //ROGUE
 
-#define	FRAMETIME		0.1
+#define	FRAMETIME		0.1f
 
 // memory tags to allow dynamic memory to be cleaned up
 #define	TAG_GAME	765		// clear when unloading the dll

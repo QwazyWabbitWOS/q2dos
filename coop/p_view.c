@@ -351,7 +351,7 @@ SV_CalcViewOffset(edict_t *ent)
 		ratio = 0;
 	}
 
-	v[2] -= ratio * ent->client->fall_value * 0.4;
+	v[2] -= ratio * ent->client->fall_value * 0.4f;
 
 	/* add bob height */
 	bob = bobfracsin * xyspeed * bob_up->value;
@@ -727,7 +727,7 @@ SV_CalcBlend(edict_t *ent)
 	if (ent->client->nuke_framenum > level.framenum) /* FS: Coop: Rogue specific */
 	{
 		float brightness;
-		brightness = (ent->client->nuke_framenum - level.framenum) / 20.0;
+		brightness = (ent->client->nuke_framenum - level.framenum) / 20.0f;
 		SV_AddBlend(1, 1, 1, brightness, ent->client->ps.blend);
 	}
 
@@ -1474,7 +1474,7 @@ ClientEndServerFrame(edict_t *ent)
 
 		if ((game.gametype == zaero_coop) && (level.fadeFrames > 0)) /* FS: Zaero specific game dll changes */
 		{
-			float ratio = (float)(50 - level.fadeFrames) / 50.0;
+			float ratio = (float)(50 - level.fadeFrames) / 50;
 			SV_AddBlend (1, 1, 1, ratio, current_client->ps.blend);
 		}
 
@@ -1503,7 +1503,7 @@ ClientEndServerFrame(edict_t *ent)
 
 	/* calculate speed and cycle to be
 	   used for all cyclic walking effects */
-	xyspeed = sqrt(
+	xyspeed = sqrtf(
 			ent->velocity[0] * ent->velocity[0] + ent->velocity[1] *
 			ent->velocity[1]);
 

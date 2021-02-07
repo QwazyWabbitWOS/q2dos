@@ -2012,7 +2012,7 @@ soldier_die(edict_t *self, edict_t *inflictor /* unused */,
 		gi.sound(self, CHAN_VOICE, sound_death_ss, 1, ATTN_NORM, 0);
 	}
 
-	if (fabs((self->s.origin[2] + self->viewheight) - point[2]) <= 4)
+	if (fabsf((self->s.origin[2] + self->viewheight) - point[2]) <= 4)
 	{
 		/* head shot */
 		self->monsterinfo.currentmove = &soldier_move_death3;
@@ -2101,7 +2101,7 @@ soldier_duck(edict_t *self, float eta) /* FS: Coop: Rogue specific */
 	{
 		self->monsterinfo.nextframe = FRAME_duck01;
 		self->monsterinfo.currentmove = &soldier_move_duck_rogue;
-		self->monsterinfo.duck_wait_time = level.time + eta + (0.1 * (3 - skill->value));
+		self->monsterinfo.duck_wait_time = level.time + eta + (0.1f * (3 - skill->value));
 	}
 	else
 	{
@@ -3900,7 +3900,7 @@ soldierh_die(edict_t *self, edict_t *inflictor /* unused */,
 		gi.sound(self, CHAN_VOICE, sound_death_ss, 1, ATTN_NORM, 0);
 	}
 
-	if (fabs((self->s.origin[2] + self->viewheight) - point[2]) <= 4)
+	if (fabsf((self->s.origin[2] + self->viewheight) - point[2]) <= 4)
 	{
 		/* head shot */
 		self->monsterinfo.currentmove = &soldierh_move_death3;

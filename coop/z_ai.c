@@ -105,7 +105,7 @@ int zFindRoamYaw(edict_t *self, float distcheck)
 
 	if(current <= self->ideal_yaw - 1 || current > self->ideal_yaw + 1)
 	{
-		if(fabs(current - self->ideal_yaw) <= 359.0)
+		if(fabsf(current - self->ideal_yaw) <= 359.0)
 		{
 			return 0;
 		}
