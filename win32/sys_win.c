@@ -439,9 +439,13 @@ Sys_UnloadGame
 */
 void Sys_UnloadGame (void)
 {
+	char* buf;
+
 #ifndef GAME_HARD_LINKED
-	if (!FreeLibrary (game_library))
-		Com_Error (ERR_FATAL, "FreeLibrary failed for game library");
+	if (!FreeLibrary(game_library)) {
+		FormatMessage(FORMAT_MESSAGE_ALLOCATE_BUFFER | FORMAT_MESSAGE_FROM_SYSTEM, NULL, GetLastError(), MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT), (LPTSTR)&buf, 0, NULL);
+		Com_Error(ERR_FATAL, "FreeLibrary failed for game library error: %s", buf);
+	}
 #endif
 	game_library = NULL;
 }
