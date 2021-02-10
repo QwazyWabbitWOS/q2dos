@@ -305,7 +305,23 @@ InitGame(void)
 	sv_vote_assume_yes = gi.cvar("sv_vote_assume_yes", "1", 0);
 	gi.cvar_setdescription("sv_vote_assume_yes", "Assume yes for the vote initiator (except for vote random).");
 	sv_vote_disallow_flags = gi.cvar("sv_vote_disallow_flags", "0", 0);
-	gi.cvar_setdescription("sv_vote_disallow_flags", "Disallow flags for voting options by players.  \nAvailable flags: \n  * No gamemode changes - 1\n  * No Vanilla gamemode - 2\n  * No Xatrix gamemode - 4\n  * No Rogue gamemode - 8\n  * No Coop difficult - 16\n  * No map changes - 32\n  * No random maps - 64\n  * No map restarting - 128\n");
+	gi.cvar_setdescription("sv_vote_disallow_flags", 
+		"Disallow flags for voting options by players.  \n"
+		"Available flags: \n"
+		"  * No gamemode changes - 1\n" // VOTE_NOGAMEMODE
+		"  * No Vanilla gamemode - 2\n"
+		"  * No Xatrix gamemode - 4\n"
+		"  * No Rogue gamemode - 8\n"
+		"  * No Zaero gamemode - 16\n"
+		"  * No Coop difficult - 32\n"
+		"  * No map changes - 64\n"
+		"  * No random maps - 128\n"
+		"  * No map restarting - 256\n"
+		"  * No player exit - 512\n"
+		"  * No player kick - 1024\n"
+		"  * No player ban - 2048\n"
+	);
+
 	sv_vote_chat_commands = gi.cvar("sv_vote_chat_commands", "1", 0);
 	gi.cvar_setdescription("sv_vote_chat_commands", "Allow \"yes\" and \"no\" chat messages to send \"vote yes\" and \"vote no\" commands if a vote is in progress.");
 
