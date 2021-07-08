@@ -278,12 +278,6 @@
     <ClInclude Include="..\coop\b_cam.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\coop\tables\clientfields.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\coop\tables\fields.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\coop\g_local.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -293,16 +287,7 @@
     <ClInclude Include="..\coop\tables\gamefunc_decs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\coop\tables\gamefunc_list.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\coop\tables\gamemmove_decs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\coop\tables\gamemmove_list.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\coop\tables\levelfields.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\coop\m_actor.h">
